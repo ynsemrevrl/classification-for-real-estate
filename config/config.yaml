@@ -1,0 +1,26 @@
+train_info:
+    batch_size: 1
+    epochs: 5
+    learning_rate: 0.001
+    dataloader:
+        train_path: dataset\Train
+        valid_path: dataset\Val
+        target_size: [512,512]
+        shuffle: True
+    results_path: results
+
+test_info:
+    batch_size: 1
+    dataloader:
+        test_path: dataset\Test
+        target_size: [512,512]
+        shuffle: False
+
+model_info:
+    model_name: resnet
+    pretrained: False
+    weights: imagenet
+    include_top: False
+    num_classes: 2
+    input_shape: [512,512,3]
+    save_path: saved_models
